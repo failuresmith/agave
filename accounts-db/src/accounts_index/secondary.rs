@@ -262,7 +262,7 @@ mod tests {
         super::*,
         std::{
             iter,
-            sync::{Arc, atomic::AtomicBool},
+            sync::{atomic::AtomicBool, Arc},
             thread,
         },
     };
