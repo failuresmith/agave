@@ -28,3 +28,10 @@
 
 - Are plugin callback failures always non-fatal to validator startup/runtime, or are there cases where export-path failures gate validator behavior?
 
+## Slice Questions
+
+- Should the first worksheet treat bootstrap peer selection and archive-content verification as one contiguous slice, or split them if the verification boundary is materially separate in code?
+
+- For vote continuity, should the first deep worksheet keep active voting and operator failover in one slice, or split failover handoff into a separate follow-on once the durable-vote proof path is clearer?
+
+- For RPC history semantics, which query family is the highest-value starting point: signature/block lookups backed by `transaction_status_cf`, or account-index-backed scans with pruned ledger state?

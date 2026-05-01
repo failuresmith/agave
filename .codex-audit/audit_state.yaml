@@ -1,7 +1,7 @@
 version: 1
 repo_name: 'agave'
 created_at: '2026-04-30T19:39:23+00:00Z'
-current_phase: map
+current_phase: slice
 scope:
   include:
     - repository docs
@@ -22,9 +22,9 @@ phases:
   system_map_v1: true
   effect_graph_v1: true
   invariants_v1: false
-  workflow_slices_started: false
+  workflow_slices_started: true
   failure_registry_v1: false
   containment_review_v1: false
   proof_plan_v1: false
   report_v1: false
-next_recommended_command: slice
+next_recommended_command: worksheet
