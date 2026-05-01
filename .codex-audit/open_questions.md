@@ -15,3 +15,16 @@
 7. Which reliability promises are client-specific to Agave versus protocol-level promises maintained in external Solana documentation (`docs/README.md`)? This boundary matters before admitting any future finding.
 
 8. What source of truth should this audit treat as authoritative for release-channel risk: the branch/channel semantics in `RELEASE.md`, the operator docs, or current CI/release automation in workflows and scripts?
+
+## Map Questions
+
+- What exact function or path verifies the downloaded snapshot archive contents after bootstrap selects a peer whose hashes match the known-validator set?
+
+- What is the strongest local proof artifact that a sent vote became durably encoded: replay observation, blockstore write, vote-account state, or another path?
+
+- Which current RPC handlers explicitly distinguish "history was pruned locally" from "record not found", especially when Bigtable fallback is disabled?
+
+- Beyond file presence and pubkey/signature checks, what code path decides that a restored tower is fresh enough for safe `--require-tower` failover?
+
+- Are plugin callback failures always non-fatal to validator startup/runtime, or are there cases where export-path failures gate validator behavior?
+
